@@ -11,20 +11,27 @@
 <script type="module" src="../js/main.js"></script>
 <body>
     <header class="header">
-        <nav class="nav_container">
-            <button id="menu-toggle">☰</button>
-            <ul class="nav-menu">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="projects.html">Projets</a></li>
-            </ul>
+        <nav class="nav-container">
+            <div>
+                <button id="menu-toggle">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                </ul>
+            </div>
+            <div class="traduction">
+                <button id="btn-fr">FR</button>
+                <button id="btn-en">EN</button>
+            </div>
         </nav>
     </header>
 
     <section class="hero_container">
-        <h2>Salut 👋 Je suis Développeuse Web</h2>
-        <p>Je crée des expériences web modernes et performantes.</p>
-        <a href="projects.html" class="btn">Voir mes projets</a>
+        <h2 id="titre-page">Mon portfolio</h2>
+        <h2 id="sous-titre">Salut 👋 Je suis Développeuse Web</h2>
+        <p id="paragraphe-presentation-rapide">Je crée des expériences web modernes et performantes.</p>
+        <a href="projects.html" class="lien-projets">Voir mes projets</a>
     </section>
 
     <section class="projects_preview_container">

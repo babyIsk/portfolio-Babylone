@@ -1,10 +1,40 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.traduction {
+    margin-right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#btn-fr, #btn-en {
+    background-color:hotpink;
+    padding: 0 12px;
+    border-radius: 5px;
+    border-width: 0px;
+    max-height: 38px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease; /* agrandit de 10% */
+}
+
+#btn-fr:hover, #btn-en:hover {
+    transform: scale(1.1); /* agrandit de 10% */
+    background-color: deeppink; 
+}
+
 #menu-toggle {
     background-color: var(--color-primary);
+    border-width: 0;
+    cursor: pointer;
     border-radius: 8px;
     padding: 10px 16px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 #menu-toggle:hover {
+    transform: scale(1.1); 
     background-color: var(--color-primary);
     background-color: var(--color-primary-hover);
 }
