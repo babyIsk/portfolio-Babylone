@@ -1,0 +1,20 @@
+#menu-toggle {
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+#menu-toggle:hover {
+    background-color: var(--color-primary);
+    background-color: var(--color-primary-hover);
+}
+
+.nav-menu {
+    gap: 1rem;
+    display: none;
+}
+
+.nav-menu.active {
+  display: flex;
+  flex-direction: column;
+}
