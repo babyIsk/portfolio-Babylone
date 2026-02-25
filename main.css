@@ -1,0 +1,19 @@
+@import "./styles/base/loader.css";
+@import "./styles/base/variables.css";
+@import "./styles/base/typography.css";
+
+@import "./styles/layout/header.css";
+@import "./styles/layout/footer.css";
+
+@import "./styles/components/animations.css";
+@import "./styles/components/buttons.css";
+@import "./styles/components/cards.css";
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
