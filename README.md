@@ -1,4 +1,4 @@
-# Babylone ISSHAK — Portfolio
+# Babylone ISSHAK - Portfolio
 
 > Portfolio personnel développé en **HTML / CSS / JavaScript vanilla**, sans framework ni dépendance externe.
 
