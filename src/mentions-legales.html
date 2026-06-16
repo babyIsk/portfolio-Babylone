@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mentions légales du portfolio de Babylone ISSHAK." />
+  <meta name="robots" content="noindex, follow" />
+
+  <title>Mentions légales — Babylone ISSHAK</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="main.css" />
+  <!-- Anti-FOUC -->
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light')</script>
+
+  <style>
+    .legal-page {
+      padding-top: calc(var(--header-h) + var(--sp-16));
+      padding-bottom: var(--sp-24);
+      min-height: 100svh;
+    }
+
+    .legal-hero {
+      background: var(--clr-bg-2);
+      border-bottom: 1px solid var(--clr-border);
+      padding-block: var(--sp-12);
+      margin-bottom: var(--sp-16);
+    }
+
+    .legal-hero h1 {
+      font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+      font-weight: var(--fw-extrabold);
+      margin-top: var(--sp-3);
+    }
+
+    .legal-hero p {
+      font-size: var(--text-sm);
+      color: var(--clr-text-muted);
+      margin-top: var(--sp-2);
+      max-width: none;
+    }
+
+    .legal-body {
+      max-width: 760px;
+    }
+
+    .legal-article {
+      margin-bottom: var(--sp-12);
+    }
+
+    .legal-article h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--fw-bold);
+      color: var(--clr-accent);
+      margin-bottom: var(--sp-4);
+      padding-bottom: var(--sp-3);
+      border-bottom: 1px solid var(--clr-border);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-3);
+    }
+
+    .legal-article h2 .article-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: var(--radius-full);
+      background: var(--clr-accent-alpha);
+      border: 1px solid var(--clr-accent-border);
+      font-size: var(--text-xs);
+      font-weight: var(--fw-bold);
+      flex-shrink: 0;
+    }
+
+    .legal-article p {
+      font-size: var(--text-base);
+      color: var(--clr-text-secondary);
+      line-height: 1.8;
+      max-width: none;
+      margin-bottom: var(--sp-3);
+    }
+
+    .legal-article p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-article strong {
+      color: var(--clr-text);
+      font-weight: var(--fw-semibold);
+    }
+
+    .legal-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: var(--sp-4);
+      font-size: var(--text-sm);
+    }
+
+    .legal-table th {
+      text-align: left;
+      padding: var(--sp-3) var(--sp-4);
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      color: var(--clr-text-muted);
+      font-weight: var(--fw-semibold);
+      font-size: var(--text-xs);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .legal-table td {
+      padding: var(--sp-3) var(--sp-4);
+      border: 1px solid var(--clr-border);
+      color: var(--clr-text-secondary);
+      vertical-align: top;
+    }
+
+    .legal-table td:first-child {
+      font-weight: var(--fw-medium);
+      color: var(--clr-text);
+      white-space: nowrap;
+      width: 30%;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      color: var(--clr-accent);
+      font-size: var(--text-sm);
+      font-weight: var(--fw-medium);
+      margin-bottom: var(--sp-6);
+      transition: gap var(--tr);
+    }
+
+    .back-link:hover { gap: var(--sp-3); }
+
+    .legal-notice {
+      background: var(--clr-card);
+      border: 1px solid var(--clr-border);
+      border-left: 3px solid var(--clr-accent);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-4) var(--sp-5);
+      font-size: var(--text-sm);
+      color: var(--clr-text-secondary);
+      line-height: 1.75;
+      margin-bottom: var(--sp-12);
+    }
+
+    .legal-notice strong {
+      color: var(--clr-accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader" role="status" aria-label="Chargement en cours">
+    <div class="loader-content">
+      <span class="loader-initials">BI</span>
+      <div class="loader-track"><div class="loader-bar"></div></div>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <!-- ── Header ── -->
+  <header class="header scrolled" id="header">
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+      <a href="index.html" class="nav-logo" aria-label="Retour à l'accueil">
+        Babylone <strong>ISSHAK</strong>
+      </a>
+      <ul class="nav-menu" id="nav-menu" role="list">
+        <li><a href="index.html#about"   class="nav-link">À propos</a></li>
+        <li><a href="index.html#skills"  class="nav-link">Compétences</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="src/projects.html"  class="nav-link nav-link-highlight">Tous les projets →</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Passer en mode clair" title="Basculer le thème">
+          <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── Main ── -->
+  <main id="main-content" class="legal-page">
+
+    <div class="legal-hero">
+      <div class="container">
+        <h1>Mentions légales</h1>
+        <p>Conformément à la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique (LCEN)</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <a href="index.html" class="back-link" aria-label="Retour à l'accueil">← Retour à l'accueil</a>
+
+      <div class="legal-notice">
+        <strong>Information :</strong> Ce site est un portfolio personnel à caractère non commercial, édité par une personne physique à titre privé.
+        Il est mis en ligne à des fins de présentation professionnelle uniquement.
+      </div>
+
+      <div class="legal-body">
+
+        <!-- Article 1 -->
+        <article class="legal-article">
+          <h2><span class="article-num" aria-hidden="true">1</span> Éditeur du site</h2>
+          <p>
+            Conformément à l'article 6-III-1 de la loi LCEN, l'éditeur du présent site est une personne physique :
+          </p>
+          <table class="legal-table" aria-label="Informations sur l'éditeur">
+            <thead>
+              <tr>
+                <th scope="col">Information</th>
+                <th scope="col">Valeur</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nom et prénom</td>
+                <td>Babylone ISSHAK</td>
+              </tr>
+              <tr>
+                <td>Qualité</td>
+                <td>Personne physique — étudiante en Master Cultures et Métiers du Web</td>
+              </tr>
+              <tr>
+                <td>Adresse e-mail</td>
+                <td><a href="mailto:babylone.isshak@gmail.com" style="color:var(--clr-accent)">babylone.isshak@gmail.com</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin-top: 1rem;">
+            Ce site étant à caractère strictement personnel et non commercial, l'adresse postale complète
+            n'est pas requise en vertu de l'article 6-III-2 de la LCEN.
+          </p>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="legal-article">
+          <h2><span class="article-num" aria-hidden="true">2</span> Directeur de la publication</h2>
+          <p>
+            Le directeur de la publication est <strong>Babylone ISSHAK</strong>, personne physique éditrice du site,
+            joignable à l'adresse : <a href="mailto:babylone.isshak@gmail.com" style="color:var(--clr-accent)">babylone.isshak@gmail.com</a>.
+          </p>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="legal-article">
+          <h2><span class="article-num" aria-hidden="true">3</span> Hébergeur</h2>
+          <p>Le présent site est hébergé par :</p>
+          <table class="legal-table" aria-label="Informations sur l'hébergeur">
+            <thead>
+              <tr>
+                <th scope="col">Information</th>
+                <th scope="col">Valeur</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dénomination sociale</td>
+                <td>GitHub, Inc.</td>
+              </tr>
+              <tr>
+                <td>Forme juridique</td>
+                <td>Société américaine filiale de Microsoft Corporation</td>
+              </tr>
+              <tr>
+                <td>Siège social</td>
+                <td>88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis</td>
+              </tr>
+              <tr>
+                <td>Service d'hébergement</td>
+                <td>GitHub Pages — <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent)">https://pages.github.com</a></td>
+              </tr>
+              <tr>
+                <td>Contact</td>
+                <td><a href="https://support.github.com" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent)">https://support.github.com</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="legal-article">
+          <h2><span class="article-num" aria-hidden="true">4</span> Propriété intellectuelle</h2>
+          <p>
+            L'ensemble des éléments constituant ce site (textes, images, mises en page, structure, logo, icônes)
+            est la propriété exclusive de <strong>Babylone ISSHAK</strong>, sauf mention contraire explicite.
+          </p>
+          <p>
+            Toute reproduction, représentation, modification, publication, transmission ou dénaturation, totale ou
+            partielle, de ce site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que
+            ce soit, est <strong>interdite sans l'autorisation préalable et écrite de Babylone ISSHAK</strong>,
+            conformément aux articles L.122-4 et L.335-2 du Code de la Propriété Intellectuelle.
+          </p>
+          <p>
+            <strong>Polices d'écriture :</strong> Space Grotesk et Inter, distribuées par Google Fonts sous
+            licence <em>SIL Open Font License 1.1</em>.
+          </p>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="legal-article">
+          <h2><span class="article-num" aria-hidden="true">5</span> Données personnelles et RGPD</h2>
+          <p>
+            Conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679)
+            et à la loi Informatique et Libertés n° 78-17 du 6 janvier 1978 modifiée, vous êtes informé(e) des
+            points suivants :
+          </p>
+          <p>
+            <strong>Collecte de données :</strong> Ce site ne collecte aucune donnée personnelle à des fins
+            commerciales ou de traçage. Aucun formulaire ne transmet de données à un serveur tiers.
+          </p>
+          <p>
+            <strong>Formulaire de contact :</strong> Le formulaire de contact de ce site utilise le protocole
+            <code style="color:var(--clr-yellow);font-size:0.9em">mailto:</code>, qui ouvre le client de messagerie
+            de l'utilisateur. Aucune donnée n'est interceptée ni stockée par ce site ou par un tiers.
+          </p>
+          <p>
+            <strong>Cookies :</strong> Ce site n'utilise aucun cookie de traçage, de publicité ou d'analyse
+            d'audience. Les polices de caractères sont chargées depuis Google Fonts, service susceptible
+            de déposer des cookies techniques sur votre navigateur selon sa politique de confidentialité.
+          </p>
+          <p>
+            <strong>Droits des utilisateurs :</strong> Conformément aux articles 15 à 22 du RGPD, vous disposez
+            d'un droit d'accès, de rectification, d'effacement, de portabilité et d'opposition concernant vos
+            données personnelles. Pour exercer ces droits, contactez :
+            <a href="mailto:babylone.isshak@gmail.com" style="color:var(--clr-accent)">babylone.isshak@gmail.com</a>.
+          </p>
+          <p>
+            Vous disposez également du droit d'introduire une réclamation auprès de la <strong>CNIL</strong>
+            (Commission Nationale de l'Informatique et des Libertés) :
+            <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent)">www.cnil.fr</a>.
+          </p>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="legal-article">
+          <h2><span class="article-num" aria-hidden="true">6</span> Liens hypertextes</h2>
+          <p>
+            Ce site peut contenir des liens hypertextes vers des sites tiers. Ces liens sont fournis à titre
+            informatif. <strong>Babylone ISSHAK</strong> ne peut être tenue responsable du contenu des sites
+            vers lesquels ces liens renvoient ni des dommages pouvant résulter de leur consultation.
+          </p>
+          <p>
+            La mise en place d'un lien hypertexte vers ce site est soumise à l'accord préalable et écrit
+            de l'éditrice.
+          </p>
+        </article>
+
+        <!-- Article 7 -->
+        <article class="legal-article">
+          <h2><span class="article-num" aria-hidden="true">7</span> Responsabilité</h2>
+          <p>
+            Babylone ISSHAK s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées
+            sur ce site. Toutefois, elle ne peut garantir l'exactitude, la précision ou l'exhaustivité des
+            informations mises à disposition. En conséquence, l'utilisateur reconnaît utiliser ces
+            informations sous sa responsabilité exclusive.
+          </p>
+          <p>
+            Babylone ISSHAK se réserve le droit de modifier, à tout moment et sans préavis, le contenu
+            du site.
+          </p>
+        </article>
+
+        <!-- Article 8 -->
+        <article class="legal-article">
+          <h2><span class="article-num" aria-hidden="true">8</span> Droit applicable</h2>
+          <p>
+            Les présentes mentions légales sont soumises au droit français. En cas de litige, et à défaut
+            d'accord amiable, compétence exclusive est donnée aux tribunaux français compétents.
+          </p>
+          <p style="color:var(--clr-text-muted);font-size:var(--text-sm)">
+            <em>Dernière mise à jour : juin 2026</em>
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none; padding-top:0">
+        <p>© 2026 Babylone ISSHAK - Tous droits réservés.</p>
+        <a href="index.html" class="footer-legal-link">← Retour à l'accueil</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initNavbar } from './js/modules/navbar.js';
+    import { initTheme }  from './js/modules/theme.js';
+
+    const loader = document.getElementById('loader');
+    window.addEventListener('load', () => setTimeout(() => loader?.classList.add('hidden'), 800));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavbar();
+      initTheme();
+    });
+  </script>
+</body>
+</html>

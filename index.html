@@ -1,50 +1,544 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon Portfolio</title>
-    <meta name="description" content="Portfolio développeuse web" />
-    <link rel="stylesheet" href="./main.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Babylone ISSHAK, développeuse Front-End JavaScript spécialisée en React, Next.js et TypeScript. Actuellement en alternance chez Sephora." />
+  <meta name="author" content="Babylone ISSHAK" />
+  <meta name="theme-color" content="#1a1a2e" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Babylone ISSHAK – Développeuse Front End JS" />
+  <meta property="og:description" content="Portfolio de Babylone ISSHAK, développeuse React & Next.js." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:locale"      content="fr_FR" />
+
+  <title>Babylone ISSHAK – Développeuse Front End JS</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="main.css" />
+  <!-- Anti-FOUC: apply saved theme before first paint -->
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light')</script>
 </head>
-<script type="module" src="./main.js"></script>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <div>
-                <button id="menu-toggle">☰</button>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                </ul>
-            </div>
-            <div class="traduction">
-                <button id="btn-fr">FR</button>
-                <button id="btn-en">EN</button>
-            </div>
-        </nav>
-    </header>
 
-    <section class="hero_container">
-        <h2 id="titre-page">Mon portfolio</h2>
-        <h2 id="sous-titre">Salut 👋 Je suis Développeuse Web</h2>
-        <p id="paragraphe-presentation-rapide">Je crée des expériences web modernes et performantes.</p>
-        <a href="projects.html" class="lien-projets">Voir mes projets</a>
-    </section>
+  <!-- Loader -->
+  <div id="loader" role="status" aria-label="Chargement en cours">
+    <div class="loader-content">
+      <span class="loader-initials">BI</span>
+      <div class="loader-track">
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+  </div>
 
-    <section class="projects_preview_container">
-        <h2>Mes projets</h2>
-        <div id="projects-container">
-            [remplir]
+  <!-- Skip link -->
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <!-- ──────────────── HEADER ──────────────── -->
+  <header class="header" id="header">
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+
+      <a href="index.html" class="nav-logo" aria-label="Retour à l'accueil – Babylone ISSHAK">
+        Babylone <strong>ISSHAK</strong>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu" role="list">
+        <li><a href="#about"    class="nav-link" data-i18n="nav.about">À propos</a></li>
+        <li><a href="#skills"   class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+        <li><a href="#contact"  class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="src/projects.html" class="nav-link nav-link-highlight" data-i18n="nav.all-projects">Tous les projets →</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-switcher" role="group" aria-label="Sélection de la langue">
+          <button class="lang-btn" data-lang="fr" aria-pressed="true"  aria-label="Passer en français">FR</button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" aria-label="Switch to English">EN</button>
         </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Passer en mode clair" title="Basculer le thème">
+          <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ──────────────── MAIN ──────────────── -->
+  <main id="main-content">
+
+    <!-- ── Hero ── -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-bg-gradient" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-greeting" data-i18n="hero.greeting">Bonjour, je suis</p>
+
+        <h1 class="hero-name">
+          Babylone <span class="text-accent">ISSHAK</span>
+        </h1>
+
+        <div class="hero-typed-wrap" aria-live="polite" aria-atomic="true">
+          <span class="hero-typed" id="hero-typed" aria-label="Développeuse Front End JS"></span>
+          <span class="typed-cursor" aria-hidden="true">|</span>
+        </div>
+
+        <p class="hero-desc" data-i18n="hero.desc">
+          Développeuse passionnée par la conception d'interfaces modernes, performantes et accessibles.
+          Actuellement en alternance chez Sephora et en Master CMW à l'Université Gustave Eiffel.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">Voir mes projets</a>
+          <a href="public/CV_Babylone_ISSHAK.pdf" class="btn btn-outline" download
+             aria-label="Télécharger le CV de Babylone ISSHAK (PDF)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/>
+            </svg>
+            <span data-i18n="hero.cta2">Télécharger mon CV</span>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/babylone-isshak-05a89a24b/"
+             class="social-link" target="_blank" rel="noopener noreferrer"
+             aria-label="Profil LinkedIn de Babylone ISSHAK">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="mailto:babylone.isshak@gmail.com"
+             class="social-link" aria-label="Envoyer un e-mail à Babylone ISSHAK">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span data-i18n="hero.scroll">Défiler</span>
+      </div>
     </section>
 
-    <footer class="footer">
-        <p>© 2026 Babylone ISSHAK</p>
-    </footer>
+    <!-- ── À propos ── -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
 
+        <header class="section-header">
+          <span class="section-label reveal" data-i18n="about.label">Qui suis-je ?</span>
+          <h2 class="section-title reveal" id="about-title" data-i18n="about.title">À propos de moi</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="reveal" data-i18n="about.p1">
+              Je suis développeuse Front-End JS, actuellement en alternance chez Sephora (La Défense) et en Master Cultures et Métiers du Web à l\'Université Gustave Eiffel.
+            </p>
+            <p class="reveal" data-i18n="about.p2">
+              Mon interêt pour l'informatique commence lors de l'année de ma terminale. J'avais décidé de \"sauter dans le vide\", 
+              en ayant la <strong>soif de toujours apprendre</strong> de nouvelles compétences, et de <strong>perfectionner 
+              celles déjà présentes</strong>. De plus, j'ai toujours été passionnée par les technologies et l'IA.
+            </p>
+            <p class="reveal" data-i18n="about.p3">
+              Mon parcours en BUT Informatique ainsi qu'en M2 CMW m\'a permis de toucher à tous les aspects du développement web et de 
+              la gestion de projet agile. Aujourd\'hui, je me concentre sur le <strong>front-end</strong> avec une forte sensibilité 
+              pour l\'<strong>UX/UI design</strong>.
+          </div>
+
+          <div class="about-visual reveal">
+            <div class="about-avatar" aria-label="Initiales Babylone ISSHAK">BI</div>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-number">2+</span>
+                <span class="stat-label" data-i18n="about.stat1">ans d'expérience</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">7+</span>
+                <span class="stat-label" data-i18n="about.stat2">projets réalisés</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label" data-i18n="about.stat3">technologies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline" aria-label="Parcours professionnel et académique">
+          <h3 class="timeline-title reveal" data-i18n="about.timeline">Mon parcours</h3>
+          <div class="timeline-items">
+
+            <article class="timeline-item reveal">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">2024 – 2026</span>
+                <h4 class="timeline-role">Développeuse Front End JS — <em>Sephora, La Défense</em></h4>
+                <p class="timeline-type">Alternance · 2 ans</p>
+                <p data-i18n="timeline.sephora">Développement du portail développeur API – React, Next.js, TypeScript, CI/CD sur GCP.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-1">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">2024 – 2026</span>
+                <h4 class="timeline-role">Master CMW — <em>Université Gustave Eiffel</em></h4>
+                <p class="timeline-type">Formation</p>
+                <p data-i18n="timeline.master">Master Cultures et Métiers du Web, spécialité développement web avancé.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-2">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">2024</span>
+                <h4 class="timeline-role">Développeuse Front End — <em>MOSS, Issy-les-Moulineaux</em></h4>
+                <p class="timeline-type">Stage · 6 mois</p>
+                <p data-i18n="timeline.moss">Application Angular de conduite aérienne pour les trois armées françaises.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-3">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">2021 – 2024</span>
+                <h4 class="timeline-role">BUT Informatique — <em>IUT Université Paris Cité</em></h4>
+                <p class="timeline-type">Formation</p>
+                <p data-i18n="timeline.but">Parcours Réalisation et Conception d'Applications – IUT Université Paris Cité.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-4">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">2023</span>
+                <h4 class="timeline-role">Développeuse Full Stack — <em>Tiqtec, La Courneuve</em></h4>
+                <p class="timeline-type">Stage · 2 mois</p>
+                <p data-i18n="timeline.tiqtec">Création du site Tiqtec + script PHP de traduction automatique via API.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Compétences ── -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-label reveal" data-i18n="skills.label">Ce que je maîtrise</span>
+          <h2 class="section-title reveal" id="skills-title" data-i18n="skills.title">Compétences</h2>
+        </header>
+
+        <div class="skills-grid">
+
+          <div class="skill-category reveal">
+            <h3 class="skill-category-title" data-i18n="skills.web">Technologies Web</h3>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag" role="listitem">HTML5</span>
+              <span class="skill-tag" role="listitem">CSS3</span>
+              <span class="skill-tag skill-tag-highlight" role="listitem">JavaScript</span>
+              <span class="skill-tag skill-tag-highlight" role="listitem">React</span>
+              <span class="skill-tag skill-tag-highlight" role="listitem">Next.js</span>
+              <span class="skill-tag skill-tag-highlight" role="listitem">TypeScript</span>
+              <span class="skill-tag" role="listitem">Angular</span>
+              <span class="skill-tag" role="listitem">PHP</span>
+              <span class="skill-tag" role="listitem">Symfony</span>
+              <span class="skill-tag" role="listitem">WordPress</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal reveal-delay-1">
+            <h3 class="skill-category-title" data-i18n="skills.db">Bases de données</h3>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag" role="listitem">MySQL</span>
+              <span class="skill-tag" role="listitem">MongoDB</span>
+              <span class="skill-tag" role="listitem">Postman</span>
+              <span class="skill-tag" role="listitem">REST API</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal reveal-delay-2">
+            <h3 class="skill-category-title" data-i18n="skills.prog">Programmation</h3>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag" role="listitem">Python</span>
+              <span class="skill-tag" role="listitem">Java</span>
+              <span class="skill-tag" role="listitem">JEE</span>
+              <span class="skill-tag" role="listitem">C</span>
+              <span class="skill-tag" role="listitem">C++</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal reveal-delay-3">
+            <h3 class="skill-category-title" data-i18n="skills.design">Design &amp; Visuels</h3>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag skill-tag-highlight" role="listitem">Figma</span>
+              <span class="skill-tag" role="listitem">Adobe Suite</span>
+              <span class="skill-tag" role="listitem">Blender</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal reveal-delay-4">
+            <h3 class="skill-category-title" data-i18n="skills.pm">Gestion de projet</h3>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag skill-tag-highlight" role="listitem">GitHub</span>
+              <span class="skill-tag" role="listitem">Jira</span>
+              <span class="skill-tag" role="listitem">Trello</span>
+              <span class="skill-tag" role="listitem">Google Drive</span>
+              <span class="skill-tag" role="listitem">Méthodes agiles</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal reveal-delay-5">
+            <h3 class="skill-category-title" data-i18n="skills.soft">Soft Skills</h3>
+            <div class="skill-tags" role="list">
+              <span class="skill-tag" role="listitem">Curiosité</span>
+              <span class="skill-tag" role="listitem">Sens du collectif</span>
+              <span class="skill-tag" role="listitem">Rigueur</span>
+              <span class="skill-tag" role="listitem">Organisation</span>
+              <span class="skill-tag" role="listitem">Leadership</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Projets (featured) ── -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-label reveal" data-i18n="projects.label">Ce que j'ai réalisé</span>
+          <h2 class="section-title reveal" id="projects-title" data-i18n="projects.title">Mes projets</h2>
+        </header>
+
+        <div class="projects-filter reveal" role="group" aria-label="Filtrer les projets">
+          <button class="filter-btn active" data-filter="all"      data-i18n="filter.all">Tous</button>
+          <button class="filter-btn"        data-filter="pro"      data-i18n="filter.pro">Professionnels</button>
+          <button class="filter-btn"        data-filter="school"   data-i18n="filter.school">Académiques</button>
+          <button class="filter-btn"        data-filter="personal" data-i18n="filter.personal">Personnels</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"
+             role="list" aria-live="polite" aria-label="Liste des projets en vedette">
+        </div>
+
+        <div class="projects-cta reveal">
+          <a href="src/projects.html" class="btn btn-outline" data-i18n="projects.all">
+            Voir tous les projets →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Vidéo ── -->
+    <section class="section section-alt" id="showreel" aria-labelledby="video-title">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-label reveal" data-i18n="video.label">En vidéo</span>
+          <h2 class="section-title reveal" id="video-title" data-i18n="video.title">Démonstration</h2>
+          <p class="section-desc reveal" data-i18n="video.desc">
+            Découvrez une démonstration de mon projet de fin d'études - un documentaire interactif
+            conçu pour offrir une expérience immersive.
+          </p>
+        </header>
+
+        <div class="video-wrapper reveal">
+          <!--
+            Remplacez l'URL ci-dessous par l'ID YouTube de votre vidéo de démonstration.
+            Exemple : https://www.youtube.com/embed/VOTRE_ID_VIDEO
+          -->
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Démonstration du documentaire interactif – Projet de fin d'études Master CMW"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-label reveal" data-i18n="contact.label">Parlons-en</span>
+          <h2 class="section-title reveal" id="contact-title" data-i18n="contact.title">Me contacter</h2>
+          <p class="section-desc reveal" data-i18n="contact.desc">
+            N'hésitez pas à me contacter pour un projet, une opportunité ou simplement pour échanger.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+            <h3 class="contact-info-title" data-i18n="contact.info.title">Retrouvez-moi sur</h3>
+
+            <div class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <a href="mailto:babylone.isshak@gmail.com" class="contact-link">
+                babylone.isshak@gmail.com
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              <a href="https://www.linkedin.com/in/babylone-isshak-05a89a24b/"
+                 class="contact-link" target="_blank" rel="noopener noreferrer">
+                LinkedIn - Babylone ISSHAK
+              </a>
+            </div>
+
+          </div>
+
+          <form class="contact-form reveal" id="contact-form" novalidate
+                aria-label="Formulaire de contact">
+
+            <div class="form-group">
+              <label class="form-label" for="name" data-i18n="contact.form.name">Nom *</label>
+              <input class="form-input" type="text" id="name" name="name"
+                     required autocomplete="name"
+                     placeholder="Votre nom complet"
+                     data-i18n-placeholder="contact.form.name-ph" />
+              <span class="form-error" id="name-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email" data-i18n="contact.form.email">E-mail *</label>
+              <input class="form-input" type="email" id="email" name="email"
+                     required autocomplete="email"
+                     placeholder="votre@email.com"
+                     data-i18n-placeholder="contact.form.email-ph" />
+              <span class="form-error" id="email-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject" data-i18n="contact.form.subject">Sujet</label>
+              <input class="form-input" type="text" id="subject" name="subject"
+                     placeholder="Sujet de votre message"
+                     data-i18n-placeholder="contact.form.subject-ph" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message" data-i18n="contact.form.message">Message *</label>
+              <textarea class="form-input" id="message" name="message"
+                        required rows="5"
+                        placeholder="Votre message..."
+                        data-i18n-placeholder="contact.form.message-ph"></textarea>
+              <span class="form-error" id="message-error" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" data-i18n="contact.form.send">
+              Envoyer
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
+
+            <div class="form-success" id="form-success" role="status" style="display:none">
+              <span data-i18n="contact.form.success">
+                Votre message a bien été envoyé ! Je vous répondrai dès que possible. 🙌
+              </span>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ──────────────── FOOTER ──────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <span class="footer-logo">Babylone <strong>ISSHAK</strong></span>
+          <p class="footer-tagline" data-i18n="footer.tagline">Développeuse Front End JS</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/babylone-isshak-05a89a24b/"
+               target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="mailto:babylone.isshak@gmail.com" aria-label="E-mail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Navigation du pied de page">
+          <h3 class="footer-nav-title" data-i18n="footer.nav-title">Navigation</h3>
+          <ul>
+            <li><a href="#about"    data-i18n="nav.about">À propos</a></li>
+            <li><a href="#skills"   data-i18n="nav.skills">Compétences</a></li>
+            <li><a href="#contact"  data-i18n="nav.contact">Contact</a></li>
+            <li><a href="src/projects.html" data-i18n="nav.all-projects">Tous les projets →</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact">
+          <h3 class="footer-nav-title" data-i18n="footer.cnt-title">Contact</h3>
+          <ul class="footer-contact-list">
+            <li><a href="mailto:babylone.isshak@gmail.com">babylone.isshak@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/babylone-isshak-05a89a24b/"
+                   target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 Babylone ISSHAK - Tous droits réservés.</p>
+        <a href="mentions-legales.html" class="footer-legal-link" data-i18n="footer.legal">Mentions légales</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script type="module" src="main.js"></script>
 </body>
-
 </html>

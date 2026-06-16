@@ -1,0 +1,168 @@
+.project-card {
+  background: var(--clr-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--tr), box-shadow var(--tr), border-color var(--tr);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--clr-accent-border);
+}
+
+.project-card[data-hidden="true"] {
+  display: none;
+}
+
+.card-thumb {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: var(--clr-bg-2);
+}
+
+.card-thumb-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: 0.05em;
+  opacity: 0.35;
+  transition: opacity var(--tr);
+}
+
+.project-card:hover .card-thumb-bg {
+  opacity: 0.5;
+}
+
+.card-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.card-badge {
+  position: absolute;
+  top: var(--sp-3);
+  right: var(--sp-3);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid;
+}
+
+.card-badge-pro {
+  background: rgba(112, 112, 232, 0.2);
+  color: #9090ff;
+  border-color: rgba(112, 112, 232, 0.4);
+}
+
+.card-badge-school {
+  background: rgba(212, 230, 76, 0.15);
+  color: var(--clr-yellow);
+  border-color: rgba(212, 230, 76, 0.3);
+}
+
+.card-badge-personal {
+  background: rgba(112, 232, 160, 0.15);
+  color: #70e8a0;
+  border-color: rgba(112, 232, 160, 0.3);
+}
+
+.card-body {
+  padding: var(--sp-5) var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--sp-3);
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+
+.card-company {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  color: var(--clr-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.card-period {
+  font-size: var(--text-xs);
+  color: var(--clr-text-muted);
+}
+
+.card-title {
+  font-size: var(--text-lg);
+  font-weight: var(--fw-bold);
+  color: var(--clr-text);
+  line-height: 1.3;
+}
+
+.card-desc {
+  font-size: var(--text-sm);
+  color: var(--clr-text-secondary);
+  line-height: 1.65;
+  flex: 1;
+  max-width: none;
+}
+
+.card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1);
+}
+
+.card-tech span {
+  font-size: 0.7rem;
+  font-weight: var(--fw-medium);
+  color: var(--clr-yellow);
+  background: var(--clr-yellow-alpha);
+  border: 1px solid rgba(212, 230, 76, 0.25);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+html.light .card-tech span {
+  color: var(--clr-accent);
+  background: var(--clr-accent-alpha);
+  border-color: var(--clr-accent-border);
+}
+
+.card-links {
+  display: flex;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-accent);
+  transition: gap var(--tr);
+}
+
+.card-link:hover {
+  gap: var(--sp-2);
+}
