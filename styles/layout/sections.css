@@ -515,6 +515,15 @@ html.light .hero-canvas {
   margin-bottom: var(--sp-10);
 }
 
+#projects .container,
+.projects-page-body {
+  max-width: 1380px;
+}
+
+#projects .projects-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .projects-cta {
   text-align: center;
 }

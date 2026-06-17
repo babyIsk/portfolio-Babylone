@@ -9,7 +9,7 @@ export const translations = {
 
     /* Hero */
     'hero.greeting': 'Bonjour, je suis',
-    'hero.typed':    ['Développeuse Front End JS', 'Passionnée du développement', 'Spécialiste UX/UI'],
+    'hero.typed':    ['Développeuse Front End', 'Passionnée du développement', 'Spécialiste UX/UI'],
     'hero.desc':     "Développeuse front-end en alternance chez Sephora et étudiante en M2, je vous propose de jeter un coup d'œil sur mes divers projets et d'en apprendre un peu plus sur moi.",
     'hero.cta1':     'Voir mes projets',
     'hero.cta2':     'Télécharger mon CV',
@@ -113,7 +113,7 @@ export const translations = {
 
     /* Hero */
     'hero.greeting': 'Hello, I am',
-    'hero.typed':    ['Front-End JS Developer', 'Coding Enthusiast', 'UX/UI Specialist'],
+    'hero.typed':    ['Front-End Developer', 'Coding Enthusiast', 'UX/UI Specialist'],
     'hero.desc':     'As a front-end developer on a work-study program at Sephora and a master’s student, I invite you to explore my various projects and learn a little more about me.',
     'hero.cta1':     'View my projects',
     'hero.cta2':     'Download CV',

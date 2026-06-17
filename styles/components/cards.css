@@ -5,13 +5,27 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform var(--tr), box-shadow var(--tr), border-color var(--tr);
+  position: relative;
+  z-index: 0;
+  transition: transform var(--tr), box-shadow var(--tr), border-color var(--tr), z-index 0s;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.04);
   box-shadow: var(--shadow-lg);
-  border-color: var(--clr-accent-border);
+  border-color: rgba(239, 242, 74, 0.35);
+  z-index: 1;
+}
+
+.card-cover-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.card-links {
+  position: relative;
+  z-index: 2;
 }
 
 .project-card[data-hidden="true"] {
@@ -71,9 +85,9 @@
 }
 
 .card-badge-school {
-  background: rgba(212, 230, 76, 0.15);
-  color: var(--clr-yellow);
-  border-color: rgba(212, 230, 76, 0.3);
+  background: rgba(244, 135, 75, 0.15);
+  color: #F4874B;
+  border-color: rgba(244, 135, 75, 0.35);
 }
 
 .card-badge-personal {
