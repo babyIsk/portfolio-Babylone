@@ -9,6 +9,21 @@ html {
   scroll-padding-top: var(--header-h);
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-accent-dark) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-accent);
+  border-radius: 99px;
 }
 
 body {
@@ -57,8 +72,8 @@ input, textarea, select {
 }
 
 ::selection {
-  background-color: var(--clr-accent);
-  color: #fff;
+  background-color: var(--clr-yellow);
+  color: #141414;
 }
 
 .skip-link {

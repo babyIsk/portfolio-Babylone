@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio de Babylone ISSHAK, développeuse Front-End JavaScript spécialisée en React, Next.js et TypeScript. Actuellement en alternance chez Sephora." />
   <meta name="author" content="Babylone ISSHAK" />
-  <meta name="theme-color" content="#1a1a2e" />
+  <meta name="theme-color" content="#141414" /> 
 
   <!-- Open Graph -->
   <meta property="og:title"       content="Babylone ISSHAK – Développeuse Front End JS" />
@@ -60,6 +60,7 @@
 
       <div class="nav-actions">
         <div class="lang-switcher" role="group" aria-label="Sélection de la langue">
+          <span class="lang-knob" aria-hidden="true"></span>
           <button class="lang-btn" data-lang="fr" aria-pressed="true"  aria-label="Passer en français">FR</button>
           <button class="lang-btn" data-lang="en" aria-pressed="false" aria-label="Switch to English">EN</button>
         </div>
@@ -178,10 +179,6 @@
               <div class="stat-item">
                 <span class="stat-number">7+</span>
                 <span class="stat-label" data-i18n="about.stat2">projets réalisés</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">10+</span>
-                <span class="stat-label" data-i18n="about.stat3">technologies</span>
               </div>
             </div>
           </div>
@@ -393,6 +390,9 @@
     <!-- ── Contact ── -->
     <section class="section section-contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
+        <span class="contact-blob contact-blob-1" aria-hidden="true"></span>
+        <span class="contact-blob contact-blob-2" aria-hidden="true"></span>
+        <span class="contact-blob contact-blob-3" aria-hidden="true"></span>
 
         <header class="section-header">
           <span class="section-label reveal" data-i18n="contact.label">Parlons-en</span>
@@ -447,13 +447,6 @@
                      placeholder="votre@email.com"
                      data-i18n-placeholder="contact.form.email-ph" />
               <span class="form-error" id="email-error" aria-live="polite"></span>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="subject" data-i18n="contact.form.subject">Sujet</label>
-              <input class="form-input" type="text" id="subject" name="subject"
-                     placeholder="Sujet de votre message"
-                     data-i18n-placeholder="contact.form.subject-ph" />
             </div>
 
             <div class="form-group">
@@ -533,7 +526,7 @@
 
       <div class="footer-bottom">
         <p data-i18n="footer.copyright">© 2026 Babylone ISSHAK - Tous droits réservés.</p>
-        <a href="mentions-legales.html" class="footer-legal-link" data-i18n="footer.legal">Mentions légales</a>
+        <a href="src/mentions-legales.html" class="footer-legal-link" data-i18n="footer.legal">Mentions légales</a>
       </div>
 
     </div>

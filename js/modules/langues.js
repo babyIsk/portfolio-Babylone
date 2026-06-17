@@ -23,7 +23,6 @@ export const translations = {
     'about.p3':       "Mon parcours en BUT Informatique ainsi qu'en M2 CMW m\'a permis de toucher à tous les aspects du développement web et de la gestion de projet agile. Aujourd\'hui, je me concentre sur le <strong>front-end</strong> avec une forte sensibilité pour l\'<strong>UX/UI design</strong>.",
     'about.stat1':    'ans d\'expérience',
     'about.stat2':    'projets réalisés',
-    'about.stat3':    'technologies',
     'about.timeline': 'Mon parcours',
 
     /* Timeline */
@@ -124,7 +123,6 @@ export const translations = {
     'about.p3':       "My studies in a BSc in Computer Science and then an M2 in Web Cultures & Professions allowed me to explore all aspects of web development and agile project management. Today, I focus on <strong>front-end</strong> development with a strong eye for <strong>UX/UI design</strong>.",
     'about.stat1':    'years experience',
     'about.stat2':    'projects completed',
-    'about.stat3':    'technologies',
     'about.timeline': 'My journey',
 
     /* Timeline */

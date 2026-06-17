@@ -8,11 +8,11 @@
 
   <title>Mentions légales — Babylone ISSHAK</title>
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="../main.css" />
   <!-- Anti-FOUC -->
   <script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light')</script>
 
@@ -172,16 +172,21 @@
   <!-- ── Header ── -->
   <header class="header scrolled" id="header">
     <nav class="nav" role="navigation" aria-label="Navigation principale">
-      <a href="index.html" class="nav-logo" aria-label="Retour à l'accueil">
+      <a href="../index.html" class="nav-logo" aria-label="Retour à l'accueil">
         Babylone <strong>ISSHAK</strong>
       </a>
       <ul class="nav-menu" id="nav-menu" role="list">
-        <li><a href="index.html#about"   class="nav-link">À propos</a></li>
-        <li><a href="index.html#skills"  class="nav-link">Compétences</a></li>
-        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-        <li><a href="src/projects.html"  class="nav-link nav-link-highlight">Tous les projets →</a></li>
+        <li><a href="../index.html#about"   class="nav-link">À propos</a></li>
+        <li><a href="../index.html#skills"  class="nav-link">Compétences</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="projects.html"  class="nav-link nav-link-highlight">Tous les projets →</a></li>
       </ul>
       <div class="nav-actions">
+        <div class="lang-switcher" role="group" aria-label="Sélection de la langue">
+          <span class="lang-knob" aria-hidden="true"></span>
+          <button class="lang-btn" data-lang="fr" aria-pressed="true"  aria-label="Passer en français">FR</button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false" aria-label="Switch to English">EN</button>
+        </div>
         <button class="theme-toggle" id="theme-toggle" aria-label="Passer en mode clair" title="Basculer le thème">
           <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="4"/>
@@ -211,7 +216,7 @@
     </div>
 
     <div class="container">
-      <a href="index.html" class="back-link" aria-label="Retour à l'accueil">← Retour à l'accueil</a>
+      <a href="../index.html" class="back-link" aria-label="Retour à l'accueil">← Retour à l'accueil</a>
 
       <div class="legal-notice">
         <strong>Information :</strong> Ce site est un portfolio personnel à caractère non commercial, édité par une personne physique à titre privé.
@@ -403,14 +408,14 @@
     <div class="container">
       <div class="footer-bottom" style="border-top:none; padding-top:0">
         <p>© 2026 Babylone ISSHAK - Tous droits réservés.</p>
-        <a href="index.html" class="footer-legal-link">← Retour à l'accueil</a>
+        <a href="../index.html" class="footer-legal-link">← Retour à l'accueil</a>
       </div>
     </div>
   </footer>
 
   <script type="module">
-    import { initNavbar } from './js/modules/navbar.js';
-    import { initTheme }  from './js/modules/theme.js';
+    import { initNavbar } from '../js/modules/navbar.js';
+    import { initTheme }  from '../js/modules/theme.js';
 
     const loader = document.getElementById('loader');
     window.addEventListener('load', () => setTimeout(() => loader?.classList.add('hidden'), 800));

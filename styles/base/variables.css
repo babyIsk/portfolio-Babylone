@@ -1,21 +1,21 @@
 :root {
   /* ── Colors ── */
-  --clr-bg: #1a1a2e;
-  --clr-bg-2: #16213e;
-  --clr-card: #22223a;
-  --clr-card-hover: #28284a;
+  --clr-bg: #141414;
+  --clr-bg-2: #1c1c1c;
+  --clr-card:  #212121;
+  --clr-card-hover: #2a2a2a;
 
   --clr-accent: #e87070;
   --clr-accent-dark: #c85a5a;
   --clr-accent-alpha: rgba(232, 112, 112, 0.12);
   --clr-accent-border: rgba(232, 112, 112, 0.3);
 
-  --clr-yellow: #d4e64c;
+  --clr-yellow: #EFF24A;
   --clr-yellow-alpha: rgba(212, 230, 76, 0.08);
 
-  --clr-text: #f0f0f8;
-  --clr-text-secondary: #a8a8c8;
-  --clr-text-muted: #6a6a90;
+  --clr-text: #f0f0f0;
+  --clr-text-secondary: #a8a8a8;
+  --clr-text-muted: #6a6a6a;
 
   --clr-border: rgba(255, 255, 255, 0.07);
   --clr-border-strong: rgba(255, 255, 255, 0.14);
@@ -99,7 +99,7 @@ html.light {
   --clr-accent-alpha:  rgba(192, 64, 64, 0.09);
   --clr-accent-border: rgba(192, 64, 64, 0.25);
 
-  --clr-yellow:        #d4e64c;
+  --clr-yellow:        #EFF24A;
   --clr-yellow-alpha:  rgba(107, 122, 0, 0.10);
 
   --clr-text:           #1a1a2e;

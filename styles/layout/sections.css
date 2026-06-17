@@ -244,17 +244,22 @@ html.light .hero-canvas {
 
 .about-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--sp-3);
   width: 100%;
 }
 
 .stat-item {
   text-align: center;
-  padding: var(--sp-4) var(--sp-2);
+  padding: var(--sp-5) var(--sp-6);
   background: var(--clr-card);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-lg);
+  transition: border-color var(--tr);
+}
+
+.stat-item:hover {
+  border-color: rgba(212, 230, 76, 0.30);
 }
 
 .stat-number {
@@ -492,7 +497,56 @@ html.light .hero-canvas {
 
 /* ── Contact ── */
 .section-contact {
-  background: linear-gradient(135deg, rgba(212, 230, 76, 0.04), rgba(232, 112, 112, 0.06));
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: var(--clr-bg);
+  border-radius: 60px 60px 0 0;
+  box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.15);
+  margin-top: -40px;
+}
+
+/* le contenu doit passer AU-DESSUS des taches */
+.section-contact .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* taches de dégradé animées */
+.contact-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+.contact-blob-1 { width: 460px; height: 460px; top: -120px;  left: -80px;   background: var(--clr-accent); animation: blobA 22s ease-in-out infinite; }
+.contact-blob-2 { width: 520px; height: 520px; bottom: -160px; right: -100px; background: var(--clr-yellow); animation: blobB 26s ease-in-out infinite; }
+.contact-blob-3 { width: 360px; height: 360px; top: 40%; left: 45%;          background: var(--clr-accent); opacity: 0.32; animation: blobC 30s ease-in-out infinite; }
+
+@keyframes blobA {
+  0%   { transform: translate(0,0) scale(1); }
+  33%  { transform: translate(8vw,6vh) scale(1.25); }
+  66%  { transform: translate(-5vw,10vh) scale(0.9); }
+  100% { transform: translate(0,0) scale(1); }
+}
+@keyframes blobB {
+  0%   { transform: translate(0,0) scale(1); }
+  33%  { transform: translate(-9vw,-7vh) scale(1.15); }
+  66%  { transform: translate(6vw,-4vh) scale(1.3); }
+  100% { transform: translate(0,0) scale(1); }
+}
+@keyframes blobC {
+  0%   { transform: translate(0,0) scale(1); }
+  50%  { transform: translate(7vw,-8vh) scale(1.2); }
+  100% { transform: translate(0,0) scale(1); }
+}
+
+/* respect des préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .contact-blob { animation: none; }
 }
 
 .contact-grid {
@@ -562,7 +616,7 @@ html.light .hero-canvas {
 
 @media (max-width: 600px) {
   .about-stats {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .projects-grid {
