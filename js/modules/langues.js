@@ -33,14 +33,18 @@ export const translations = {
     'timeline.tiqtec':  'Création du site Tiqtec + script PHP de traduction automatique via API.',
 
     /* Skills */
-    'skills.label': 'Ce que je maîtrise',
-    'skills.title': 'Compétences',
-    'skills.web':   'Technologies Web',
-    'skills.db':    'Bases de données',
-    'skills.prog':  'Programmation',
-    'skills.design':'Design & Visuels',
-    'skills.pm':    'Gestion de projet',
-    'skills.soft':  'Soft Skills',
+    'skills.label':       'Ce que je maîtrise',
+    'skills.web':         'Compétences techniques',
+    'skills.pm':          'Workflow & outils',
+    'skills.soft':        'Qualités personnelles',
+    'skills.exp-label':   'Expertise',
+    'skills.tools-label': 'Outils',
+    'skills.soft-label':  'Soft skills',
+    'skills.soft.1': 'Curiosité insatiable',
+    'skills.soft.2': 'Sens du collectif',
+    'skills.soft.3': 'Rigueur technique',
+    'skills.soft.4': 'Organisation',
+    'skills.soft.5': 'Esprit produit & UX',
 
     /* Projects */
     'projects.label': 'Ce que j\'ai réalisé',
@@ -133,14 +137,18 @@ export const translations = {
     'timeline.tiqtec':  'Built Tiqtec website + PHP auto-translation script via API.',
 
     /* Skills */
-    'skills.label': 'What I know',
-    'skills.title': 'Skills',
-    'skills.web':   'Web Technologies',
-    'skills.db':    'Databases',
-    'skills.prog':  'Programming',
-    'skills.design':'Design & Visuals',
-    'skills.pm':    'Project Management',
-    'skills.soft':  'Soft Skills',
+    'skills.label':       'What I master',
+    'skills.web':         'Technical Skills',
+    'skills.pm':          'Workflow & Tools',
+    'skills.soft':        'Soft Skills',
+    'skills.exp-label':   'Expertise',
+    'skills.tools-label': 'Tools',
+    'skills.soft-label':  'Soft skills',
+    'skills.soft.1': 'Insatiable curiosity',
+    'skills.soft.2': 'Team spirit',
+    'skills.soft.3': 'Technical rigour',
+    'skills.soft.4': 'Organisation',
+    'skills.soft.5': 'Product & UX mindset',
 
     /* Projects */
     'projects.label': 'What I\'ve built',

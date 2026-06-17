@@ -371,41 +371,82 @@ html.light .hero-canvas {
 }
 
 /* ── Skills ── */
+/* en-tête : juste la pastille, centrée */
+.skills-head { text-align: center; }
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--sp-6);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-12);
+  align-items: start;
 }
 
-.skill-category {
-  background: var(--clr-card);
-  border: 1px solid var(--clr-border);
-  border-radius: var(--radius-xl);
-  padding: var(--sp-6);
-  transition: border-color var(--tr), box-shadow var(--tr);
-}
-
-.skill-category:hover {
-  border-color: var(--clr-accent-border);
-  box-shadow: var(--shadow-md);
-}
-
-.skill-category-title {
-  font-size: var(--text-base);
+.skills-pill {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
   font-weight: var(--fw-semibold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--clr-accent);
-  margin-bottom: var(--sp-4);
+  background: var(--clr-accent-alpha);
+  border: 1px solid var(--clr-accent-border);
+  padding: 7px 18px;
+  border-radius: var(--radius-full);
+}
+
+/* sur-titre de colonne (Expertise / Outils / Soft skills) */
+.skill-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin: 0 0 var(--sp-2);
+}
+
+/* les colonnes ne sont plus des cartes */
+.skill-category {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.skill-category:hover {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* titre de colonne en gros, sans la barre */
+.skill-category-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--clr-text);
+  margin-bottom: var(--sp-5);
+}
+.skill-category-title::before { display: none; }
+
+/* liste « qualités personnelles » avec puce jaune */
+.skill-quals {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.skill-quals li {
   display: flex;
   align-items: center;
-  gap: var(--sp-2);
+  gap: var(--sp-3);
+  color: var(--clr-text);
 }
-
-.skill-category-title::before {
+.skill-quals li::before {
   content: '';
-  width: 18px;
-  height: 2px;
-  background: var(--clr-accent);
-  border-radius: var(--radius-full);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--clr-yellow);
   flex-shrink: 0;
 }
 
@@ -416,21 +457,23 @@ html.light .hero-canvas {
 }
 
 .skill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
   font-size: var(--text-sm);
   font-weight: var(--fw-medium);
+  background: var(--clr-card);
+  border: 1px solid var(--clr-border-strong);
   color: var(--clr-text-secondary);
-  background: var(--clr-bg);
-  border: 1px solid var(--clr-border);
-  padding: var(--sp-1) var(--sp-3);
-  border-radius: var(--radius-full);
-  transition: color var(--tr-fast), border-color var(--tr-fast), background var(--tr-fast);
+  white-space: nowrap;
 }
 
-.skill-tag:hover,
 .skill-tag-highlight {
-  color: var(--clr-accent);
-  border-color: var(--clr-accent-border);
   background: var(--clr-accent-alpha);
+  border-color: var(--clr-accent-border);
+  color: var(--clr-accent);
+  font-weight: var(--fw-semibold);
 }
 
 /* ── Projects ── */
@@ -479,7 +522,9 @@ html.light .hero-canvas {
 /* ── Video ── */
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%;
+  max-width: 720px;
+  margin-inline: auto;
+  padding-bottom: min(56.25%, 405px);
   height: 0;
   overflow: hidden;
   border-radius: var(--radius-xl);
@@ -590,6 +635,11 @@ html.light .hero-canvas {
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
   }

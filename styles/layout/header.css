@@ -132,7 +132,7 @@
 }
 
 /* texte lisible par-dessus la pastille : blanc sur le rose, foncé sur le jaune */
-.lang-btn[data-lang="fr"].active { color: #fff; }
+.lang-btn[data-lang="fr"].active { color: #1c1c1c; }
 .lang-btn[data-lang="en"].active { color: #1c1c1c; }
 
 .lang-btn:not(.active):hover { color: var(--clr-text); }
