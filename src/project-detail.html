@@ -212,6 +212,44 @@
       gap: var(--sp-2);
     }
 
+    /* ── CTA bouton fin de section Résultat ── */
+    .detail-cta-wrap {
+      margin-top: var(--sp-6);
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-2);
+      padding: 12px var(--sp-6);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      font-weight: var(--fw-semibold);
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      transition: opacity var(--tr-fast), transform var(--tr-fast), background var(--tr);
+    }
+
+    .btn-cta:hover {
+      opacity: 0.88;
+      transform: translateY(-2px);
+    }
+
+    .btn-cta-visit {
+      background: var(--clr-accent);
+      color: #fff;
+    }
+
+    .btn-cta-download {
+      background: transparent;
+      color: var(--clr-accent);
+      border: 1px solid var(--clr-accent-border);
+    }
+
+    .btn-cta-download:hover {
+      background: var(--clr-accent-alpha);
+    }
+
     /* Responsive */
     @media (max-width: 900px) {
       .detail-hero-inner {
@@ -308,6 +346,7 @@
             <div class="detail-section">
               <p class="detail-section-label">Résultat</p>
               <p id="detail-result" class="detail-section-text"></p>
+              <div id="detail-cta" class="detail-cta-wrap"></div>
             </div>
           </div>
 
@@ -425,6 +464,25 @@
         const cls = highlighted.includes(tag) ? 'sidebar-tag' : 'sidebar-tag neutral';
         return `<span class="${cls}">${tag}</span>`;
       }).join('');
+
+      const ctaEl = document.getElementById('detail-cta');
+      if (ctaEl) {
+        if (project.cta?.type === 'visit') {
+          const label = lang === 'fr' ? 'Visiter le site' : 'Visit the site';
+          ctaEl.innerHTML = `<a href="${project.cta.url}" class="btn-cta btn-cta-visit" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            ${label}
+          </a>`;
+        } else if (project.cta?.type === 'download') {
+          const label = lang === 'fr' ? 'Télécharger le rapport' : 'Download the report';
+          ctaEl.innerHTML = `<a href="${project.cta.url}" class="btn-cta btn-cta-download" download>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            ${label}
+          </a>`;
+        } else {
+          ctaEl.innerHTML = '';
+        }
+      }
 
       const linksBlock = document.getElementById('detail-links-block');
       if (project.github || project.demo) {
