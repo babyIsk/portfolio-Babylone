@@ -203,27 +203,31 @@ html.light .header.scrolled {
   background: rgba(250, 249, 247, 0.92);
 }
 
-/* ── Mobile ── */
-@media (max-width: 768px) {
+/* ── Hamburger menu (mobile + tablette) ── */
+@media (max-width: 1024px) {
+
+  /* Afficher le bouton hamburger */
   .menu-toggle {
     display: flex;
   }
 
+  /* Cacher le menu desktop */
   .nav-menu {
+    display: none;
     position: fixed;
     top: var(--header-h);
     left: 0;
     right: 0;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 0;
     background: rgba(20, 20, 20, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: var(--sp-4) var(--container-pad) var(--sp-6);
     border-bottom: 1px solid var(--clr-border);
-    transform: translateY(-110%);
-    transition: transform var(--tr-slow);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    z-index: var(--z-nav);
     pointer-events: none;
   }
 
@@ -231,19 +235,58 @@ html.light .header.scrolled {
     background: rgba(250, 249, 247, 0.98);
   }
 
+  /* Menu ouvert */
   .nav-menu.open {
-    transform: translateY(0);
+    display: flex;
     pointer-events: auto;
+    animation: navMenuOpen 0.22s ease forwards;
   }
 
+  @keyframes navMenuOpen {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Liens dans le menu mobile */
   .nav-link {
+    display: block;
     width: 100%;
-    padding: var(--sp-3) var(--sp-2);
+    padding: var(--sp-4) var(--sp-3);
     font-size: var(--text-base);
     border-radius: var(--radius-md);
+    border-bottom: 1px solid var(--clr-border);
+    white-space: normal;
+  }
+
+  .nav-link:last-child,
+  .nav-menu li:last-child .nav-link {
+    border-bottom: none;
   }
 
   .nav-link-highlight {
-    margin-top: var(--sp-2);
+    margin-top: var(--sp-3);
+    border: none;
+    background: var(--clr-accent-alpha);
+  }
+
+  /* Réduire le gap entre logo et actions */
+  .nav {
+    gap: var(--sp-4);
+  }
+
+  /* Logo un peu plus petit */
+  .nav-logo {
+    font-size: var(--text-base);
+  }
+}
+
+/* ── Très petits écrans ── */
+@media (max-width: 380px) {
+  .nav-actions {
+    gap: var(--sp-2);
+  }
+
+  .lang-btn {
+    padding: var(--sp-1) var(--sp-2);
   }
 }

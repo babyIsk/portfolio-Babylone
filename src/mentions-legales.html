@@ -140,6 +140,12 @@
 
     .back-link:hover { gap: var(--sp-3); }
 
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--radius-md);
+    }
+
     .legal-notice {
       background: var(--clr-card);
       border: 1px solid var(--clr-border);
@@ -231,28 +237,30 @@
           <p>
             Conformément à l'article 6-III-1 de la loi LCEN, l'éditeur du présent site est une personne physique :
           </p>
-          <table class="legal-table" aria-label="Informations sur l'éditeur">
-            <thead>
-              <tr>
-                <th scope="col">Information</th>
-                <th scope="col">Valeur</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Nom et prénom</td>
-                <td>Babylone ISSHAK</td>
-              </tr>
-              <tr>
-                <td>Qualité</td>
-                <td>Personne physique — étudiante en Master Cultures et Métiers du Web</td>
-              </tr>
-              <tr>
-                <td>Adresse e-mail</td>
-                <td><a href="mailto:babylone.isshak@gmail.com" style="color:var(--clr-accent)">babylone.isshak@gmail.com</a></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-wrapper">
+            <table class="legal-table" aria-label="Informations sur l'éditeur">
+              <thead>
+                <tr>
+                  <th scope="col">Information</th>
+                  <th scope="col">Valeur</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Nom et prénom</td>
+                  <td>Babylone ISSHAK</td>
+                </tr>
+                <tr>
+                  <td>Qualité</td>
+                  <td>Personne physique — étudiante en Master Cultures et Métiers du Web</td>
+                </tr>
+                <tr>
+                  <td>Adresse e-mail</td>
+                  <td><a href="mailto:babylone.isshak@gmail.com" style="color:var(--clr-accent)">babylone.isshak@gmail.com</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <p style="margin-top: 1rem;">
             Ce site étant à caractère strictement personnel et non commercial, l'adresse postale complète
             n'est pas requise en vertu de l'article 6-III-2 de la LCEN.
@@ -272,36 +280,38 @@
         <article class="legal-article">
           <h2><span class="article-num" aria-hidden="true">3</span> Hébergeur</h2>
           <p>Le présent site est hébergé par :</p>
-          <table class="legal-table" aria-label="Informations sur l'hébergeur">
-            <thead>
-              <tr>
-                <th scope="col">Information</th>
-                <th scope="col">Valeur</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Dénomination sociale</td>
-                <td>GitHub, Inc.</td>
-              </tr>
-              <tr>
-                <td>Forme juridique</td>
-                <td>Société américaine filiale de Microsoft Corporation</td>
-              </tr>
-              <tr>
-                <td>Siège social</td>
-                <td>88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis</td>
-              </tr>
-              <tr>
-                <td>Service d'hébergement</td>
-                <td>GitHub Pages — <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent)">https://pages.github.com</a></td>
-              </tr>
-              <tr>
-                <td>Contact</td>
-                <td><a href="https://support.github.com" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent)">https://support.github.com</a></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-wrapper">
+            <table class="legal-table" aria-label="Informations sur l'hébergeur">
+              <thead>
+                <tr>
+                  <th scope="col">Information</th>
+                  <th scope="col">Valeur</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Dénomination sociale</td>
+                  <td>GitHub, Inc.</td>
+                </tr>
+                <tr>
+                  <td>Forme juridique</td>
+                  <td>Société américaine filiale de Microsoft Corporation</td>
+                </tr>
+                <tr>
+                  <td>Siège social</td>
+                  <td>88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis</td>
+                </tr>
+                <tr>
+                  <td>Service d'hébergement</td>
+                  <td>GitHub Pages — <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent)">https://pages.github.com</a></td>
+                </tr>
+                <tr>
+                  <td>Contact</td>
+                  <td><a href="https://support.github.com" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent)">https://support.github.com</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </article>
 
         <!-- Article 4 -->

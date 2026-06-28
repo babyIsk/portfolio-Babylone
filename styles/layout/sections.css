@@ -645,8 +645,12 @@ html.light .hero-canvas {
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--sp-8);
+  }
+
+  #projects .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-grid {
@@ -678,12 +682,32 @@ html.light .hero-canvas {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .projects-grid {
+  .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .projects-grid,
+  #projects .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-contact {
+    border-radius: 28px 28px 0 0;
+    margin-top: -20px;
   }
 
   .hero-cta {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding-block: var(--sp-10);
+  }
+
+  .contact-blob-1 { width: 280px; height: 280px; }
+  .contact-blob-2 { width: 300px; height: 300px; }
+  .contact-blob-3 { width: 220px; height: 220px; }
 }

@@ -23,9 +23,15 @@ export function initNavbar() {
 
   /* Close menu on link click */
   menu.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
       menu.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
+
+      if (href && !href.startsWith('#')) {
+        e.preventDefault();
+        window.location.href = href;
+      }
     });
   });
 
