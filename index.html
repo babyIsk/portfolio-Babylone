@@ -45,13 +45,13 @@
 
   <!-- ──────────────── HEADER ──────────────── -->
   <header class="header" id="header">
-    <nav class="nav" role="navigation" aria-label="Navigation principale">
+    <nav class="nav" aria-label="Navigation principale">
 
       <a href="index.html" class="nav-logo" aria-label="Retour à l'accueil – Babylone ISSHAK">
         Babylone <strong>ISSHAK</strong>
       </a>
 
-      <ul class="nav-menu" id="nav-menu" role="list">
+      <ul class="nav-menu" id="nav-menu">
         <li><a href="#about"    class="nav-link" data-i18n="nav.about">À propos</a></li>
         <li><a href="#skills"   class="nav-link" data-i18n="nav.skills">Compétences</a></li>
         <li><a href="#contact"  class="nav-link" data-i18n="nav.contact">Contact</a></li>
@@ -99,7 +99,7 @@
         </h1>
 
         <div class="hero-typed-wrap" aria-live="polite" aria-atomic="true">
-          <span class="hero-typed" id="hero-typed" aria-label="Développeuse Front end"></span>
+          <span class="hero-typed" id="hero-typed"></span>
           <span class="typed-cursor" aria-hidden="true">|</span>
         </div>
 
@@ -187,7 +187,7 @@
         </div>
 
         <!-- Timeline -->
-        <div class="timeline" aria-label="Parcours professionnel et académique">
+        <div class="timeline" role="region" aria-label="Parcours professionnel et académique">
           <h3 class="timeline-title reveal" data-i18n="about.timeline">Mon parcours</h3>
           <div class="timeline-items">
 
@@ -297,12 +297,12 @@
           <div class="skill-category reveal reveal-delay-2">
             <p class="skill-eyebrow" data-i18n="skills.soft-label">Soft skills</p>
             <h3 class="skill-category-title" data-i18n="skills.soft">Qualités personnelles</h3>
-            <ul class="skill-quals" role="list">
-              <li role="listitem" data-i18n="skills.soft.1">Curiosité insatiable</li>
-              <li role="listitem" data-i18n="skills.soft.2">Sens du collectif</li>
-              <li role="listitem" data-i18n="skills.soft.3">Rigueur technique</li>
-              <li role="listitem" data-i18n="skills.soft.4">Organisation</li>
-              <li role="listitem" data-i18n="skills.soft.5">Esprit produit &amp; UX</li>
+            <ul class="skill-quals">
+              <li data-i18n="skills.soft.1">Curiosité insatiable</li>
+              <li data-i18n="skills.soft.2">Sens du collectif</li>
+              <li data-i18n="skills.soft.3">Rigueur technique</li>
+              <li data-i18n="skills.soft.4">Organisation</li>
+              <li data-i18n="skills.soft.5">Esprit produit &amp; UX</li>
             </ul>
           </div>
 
@@ -450,7 +450,7 @@
   </main>
 
   <!-- ──────────────── FOOTER ──────────────── -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
 
       <div class="footer-grid">
