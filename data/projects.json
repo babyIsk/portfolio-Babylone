@@ -29,9 +29,29 @@
     "result_en": "A modern, performant and maintainable portal, deployed in production and used daily by the technical teams.",
     "role_fr": "Développeuse Front-End & Designer UX/UI",
     "role_en": "Front-End Developer & UX/UI Designer",
-    "tech": ["React", "Next.js", "TypeScript", "Figma", "API", "CI/CD", "GCP"],
-    "card_tags_fr": ["Site web", "Back office", "API", "UX/UI Design", "React"],
-    "card_tags_en": ["Website", "Back office", "API", "UX/UI Design", "React"],
+    "tech": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Figma",
+      "API",
+      "CI/CD",
+      "GCP"
+    ],
+    "card_tags_fr": [
+      "Site web",
+      "Back office",
+      "API",
+      "UX/UI Design",
+      "React"
+    ],
+    "card_tags_en": [
+      "Website",
+      "Back office",
+      "API",
+      "UX/UI Design",
+      "React"
+    ],
     "color": "#e87070",
     "featured": true,
     "github": "",
@@ -69,9 +89,21 @@
     "result_en": "A robust and user-friendly application, delivered on time and integrated into the armed forces' operational systems.",
     "role_fr": "Développeuse Front-End",
     "role_en": "Front-End Developer",
-    "tech": ["Angular", "TypeScript", "API"],
-    "card_tags_fr": ["App web", "API", "Angular"],
-    "card_tags_en": ["Web App", "API", "Angular"],
+    "tech": [
+      "Angular",
+      "TypeScript",
+      "API"
+    ],
+    "card_tags_fr": [
+      "App web",
+      "API",
+      "Angular"
+    ],
+    "card_tags_en": [
+      "Web App",
+      "API",
+      "Angular"
+    ],
     "color": "#7070e8",
     "featured": true,
     "github": "",
@@ -109,17 +141,37 @@
     "result_en": "An immersive and original site blending filmic storytelling and digital interactions, presented at the end-of-studies defence.",
     "role_fr": "Développeuse Front-End & Designer UX/UI & Tech Lead",
     "role_en": "Front-End Developer & UX/UI Designer & Tech Lead",
-    "tech": ["React", "three.js", "Figma", "GitHub", "UX Design"],
-    "card_tags_fr": ["Site web", "UX/UI Design", "3D", "Méthodes agiles"],
-    "card_tags_en": ["Website", "UX/UI Design", "3D", "Agile Methods"],
+    "tech": [
+      "React",
+      "three.js",
+      "Figma",
+      "GitHub",
+      "UX Design"
+    ],
+    "card_tags_fr": [
+      "Site web",
+      "UX/UI Design",
+      "3D",
+      "Méthodes agiles"
+    ],
+    "card_tags_en": [
+      "Website",
+      "UX/UI Design",
+      "3D",
+      "Agile Methods"
+    ],
     "color": "#d4e64c",
     "featured": true,
     "github": "",
     "demo": "",
-    "cta": { "type": "visit", "url": "https://noli.mastercmw.com/home" },
-    "thumbnail": "",
-    "video": "video-documentaire-interactif.mp4",
-    "demo_video": "video-documentaire-interactif.mp4"
+    "cta": {
+      "type": "visit",
+      "url": "https://noli.mastercmw.com/home"
+    },
+    "thumbnail": "jeux-coreens.webp",
+    "video": "",
+    "demo_video": "",
+    "youtube": "eRLw6dYHlng"
   },
   {
     "id": "archives-nationales",
@@ -151,9 +203,25 @@
     "result_en": "A functional MVP delivered to the client, validated during review sessions, with a clear roadmap for the next iterations.",
     "role_fr": "Développeuse Front-End & Tech Lead",
     "role_en": "Front-End Developer & Tech Lead",
-    "tech": ["PWA", "React", "Librairie DSFR", "Figma", "Méthodes agiles"],
-    "card_tags_fr": ["PWA", "Librairie DSFR", "Méthodes agiles", "React"],
-    "card_tags_en": ["PWA", "DSFR Library", "Agile Methods", "React"],
+    "tech": [
+      "PWA",
+      "React",
+      "Librairie DSFR",
+      "Figma",
+      "Méthodes agiles"
+    ],
+    "card_tags_fr": [
+      "PWA",
+      "Librairie DSFR",
+      "Méthodes agiles",
+      "React"
+    ],
+    "card_tags_en": [
+      "PWA",
+      "DSFR Library",
+      "Agile Methods",
+      "React"
+    ],
     "color": "#e8a870",
     "featured": true,
     "github": "",
@@ -191,14 +259,31 @@
     "result_en": "A site delivered on time and a functional translation script enabling automatic content localisation in multiple languages.",
     "role_fr": "Développeuse Full Stack",
     "role_en": "Full Stack Developer",
-    "tech": ["PHP", "WordPress", "REST API"],
-    "card_tags_fr": ["Site web", "Script PHP", "API", "UX/UI Design"],
-    "card_tags_en": ["Website", "PHP Script", "API", "UX/UI Design"],
+    "tech": [
+      "PHP",
+      "WordPress",
+      "REST API"
+    ],
+    "card_tags_fr": [
+      "Site web",
+      "Script PHP",
+      "API",
+      "UX/UI Design"
+    ],
+    "card_tags_en": [
+      "Website",
+      "PHP Script",
+      "API",
+      "UX/UI Design"
+    ],
     "color": "#70c8e8",
     "featured": true,
     "github": "",
     "demo": "",
-    "cta": { "type": "visit", "url": "https://tiqtec.com/" },
+    "cta": {
+      "type": "visit",
+      "url": "https://tiqtec.com/"
+    },
     "thumbnail": "tiqtec.webp"
   },
   {
@@ -231,14 +316,41 @@
     "result_en": "A complete mobile and web application with a polished UX and numerous features for sharing and interaction between users.",
     "role_fr": "Designer UX/UI & Développeuse Mobile (équipe de 6)",
     "role_en": "UX/UI Designer & Mobile Developer (team of 6)",
-    "tech": ["Android Studio", "Java", "Angular", "SpringBoot", "Figma", "Ionic", "SQL"],
-    "card_tags_fr": ["App mobile", "App web", "UX/UI Design", "Java", "Android Studio", "Angular", "SpringBoot"],
-    "card_tags_en": ["Mobile App", "Web App", "UX/UI Design", "Java", "Android Studio", "Angular", "SpringBoot"],
+    "tech": [
+      "Android Studio",
+      "Java",
+      "Angular",
+      "SpringBoot",
+      "Figma",
+      "Ionic",
+      "SQL"
+    ],
+    "card_tags_fr": [
+      "App mobile",
+      "App web",
+      "UX/UI Design",
+      "Java",
+      "Android Studio",
+      "Angular",
+      "SpringBoot"
+    ],
+    "card_tags_en": [
+      "Mobile App",
+      "Web App",
+      "UX/UI Design",
+      "Java",
+      "Android Studio",
+      "Angular",
+      "SpringBoot"
+    ],
     "color": "#e87070",
     "featured": false,
     "github": "",
     "demo": "",
-    "cta": { "type": "download", "url": "../public/reports/Rapport_ShareEat_S6.pdf" },
+    "cta": {
+      "type": "download",
+      "url": "../public/reports/Rapport_ShareEat_S6.pdf"
+    },
     "thumbnail": "ProjetShareEat.webp"
   },
   {
@@ -271,16 +383,34 @@
     "result_en": "A modern and performant site with a back-office allowing the client to manage their content with full autonomy.",
     "role_fr": "Développeuse Full Stack & Cheffe de projet",
     "role_en": "Full Stack Developer & Project Lead",
-    "tech": ["React", "Node.js", "CMS sur mesure"],
-    "card_tags_fr": ["Site web", "App mobile", "Back office", "API"],
-    "card_tags_en": ["Website", "Mobile App", "Back office", "API"],
+    "tech": [
+      "React",
+      "Node.js",
+      "CMS sur mesure"
+    ],
+    "card_tags_fr": [
+      "Site web",
+      "App mobile",
+      "Back office",
+      "API"
+    ],
+    "card_tags_en": [
+      "Website",
+      "Mobile App",
+      "Back office",
+      "API"
+    ],
     "color": "#70e8a0",
     "featured": true,
     "github": "",
     "demo": "",
-    "cta": { "type": "visit", "url": "https://saint-thomas-v2.web.app/" },
-    "thumbnail": "",
-    "video": "video_site_paroisse_STA.mp4"
+    "cta": {
+      "type": "visit",
+      "url": "https://saint-thomas-v2.web.app/"
+    },
+    "thumbnail": "paroisse-chaldéenne.webp",
+    "video": "",
+    "youtube": "pLpHgt9Hl6s"
   },
   {
     "id": "paroisse-sarcelles",
@@ -312,14 +442,28 @@
     "result_en": "A responsive, accessible and easy-to-maintain site, delivered on time and appreciated by the parish team.",
     "role_fr": "Developpeuse & Designer UX/UI",
     "role_en": "Developer & UX/UI Designer",
-    "tech": ["WordPress", "Figma"],
-    "card_tags_fr": ["Site web", "UX/UI Design", "CMS"],
-    "card_tags_en": ["Website", "UX/UI Design", "CMS"],
+    "tech": [
+      "WordPress",
+      "Figma"
+    ],
+    "card_tags_fr": [
+      "Site web",
+      "UX/UI Design",
+      "CMS"
+    ],
+    "card_tags_en": [
+      "Website",
+      "UX/UI Design",
+      "CMS"
+    ],
     "color": "#c870e8",
     "featured": false,
     "github": "",
     "demo": "",
-    "cta": { "type": "visit", "url": "https://paroissesarcelles.wpcomstaging.com/" },
+    "cta": {
+      "type": "visit",
+      "url": "https://paroissesarcelles.wpcomstaging.com/"
+    },
     "thumbnail": "paroisse-sarcelles.webp"
   },
   {
@@ -352,14 +496,28 @@
     "result_en": "A clear and attractive site allowing the agency to showcase their rental spaces and attract new clients for festive events.",
     "role_fr": "Développeuse & Designer",
     "role_en": "Developer & Designer",
-    "tech": ["WordPress", "Figma"],
-    "card_tags_fr": ["Site web", "UX/UI Design", "CMS"],
-    "card_tags_en": ["Website", "UX/UI Design", "CMS"],
+    "tech": [
+      "WordPress",
+      "Figma"
+    ],
+    "card_tags_fr": [
+      "Site web",
+      "UX/UI Design",
+      "CMS"
+    ],
+    "card_tags_en": [
+      "Website",
+      "UX/UI Design",
+      "CMS"
+    ],
     "color": "#e8c070",
     "featured": false,
     "github": "",
     "demo": "",
-    "cta": { "type": "visit", "url": "https://www.hl-locationsalle.com/" },
+    "cta": {
+      "type": "visit",
+      "url": "https://www.hl-locationsalle.com/"
+    },
     "thumbnail": "macles.webp"
   },
   {
@@ -392,14 +550,35 @@
     "result_en": "A functional MVP presenting the key pages of the Privas website, with data generated and analysed via SQL queries to simulate survey results.",
     "role_fr": "Développeuse Front-End & Designer (équipe de 3)",
     "role_en": "Front-End Developer & Designer (team of 3)",
-    "tech": ["HTML5", "CSS3", "JavaScript", "React", "Figma", "SQL", "Excel"],
-    "card_tags_fr": ["Site web", "UX/UI Design", "SQL", "Excel"],
-    "card_tags_en": ["Website", "UX/UI Design", "SQL", "Excel"],
+    "tech": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Figma",
+      "SQL",
+      "Excel"
+    ],
+    "card_tags_fr": [
+      "Site web",
+      "UX/UI Design",
+      "SQL",
+      "Excel"
+    ],
+    "card_tags_en": [
+      "Website",
+      "UX/UI Design",
+      "SQL",
+      "Excel"
+    ],
     "color": "#70b8e8",
     "featured": false,
     "github": "",
     "demo": "",
-    "cta": { "type": "download", "url": "../public/reports/rapport_MVC_Privas.pdf" },
+    "cta": {
+      "type": "download",
+      "url": "../public/reports/rapport_MVC_Privas.pdf"
+    },
     "thumbnail": "privas-ardeche.avif",
     "thumbnail_credit": "ardeche.one",
     "video": ""
@@ -432,9 +611,20 @@
     "result_en": "Original and immersive 3D models enriching the MMORPG concept presentation with a strong visual identity.",
     "role_fr": "Modélisatrice 3D",
     "role_en": "3D Modeller",
-    "tech": ["Blender", "3D Modelling"],
-    "card_tags_fr": ["3D", "Modélisation", "Game Design"],
-    "card_tags_en": ["3D", "Modelling", "Game Design"],
+    "tech": [
+      "Blender",
+      "3D Modelling"
+    ],
+    "card_tags_fr": [
+      "3D",
+      "Modélisation",
+      "Game Design"
+    ],
+    "card_tags_en": [
+      "3D",
+      "Modelling",
+      "Game Design"
+    ],
     "color": "#a070e8",
     "featured": false,
     "github": "",

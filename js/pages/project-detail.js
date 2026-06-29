@@ -32,7 +32,10 @@ function render(project, lang) {
   document.getElementById('detail-year').textContent    = project.period;
 
   const visual = document.getElementById('detail-visual');
-  if (project.video) {
+  if (project.youtube) {
+    visual.style.cssText = 'background:none;color:inherit;opacity:1;';
+    visual.innerHTML = `<iframe src="https://www.youtube.com/embed/${project.youtube}?rel=0" title="Aperçu – ${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>`;
+  } else if (project.video) {
     visual.style.cssText = 'background:none;color:inherit;opacity:1;';
     visual.innerHTML = `<video style="width:100%;height:100%;object-fit:cover;" autoplay loop muted playsinline controls aria-label="Aperçu vidéo – ${title}">
       <source src="../public/${project.video}" type="video/mp4" />
@@ -77,12 +80,13 @@ function render(project, lang) {
     }
   }
 
-  const demoWrap   = document.getElementById('detail-demo');
-  const demoSource = document.getElementById('detail-demo-source');
-  const demoVideo  = document.getElementById('detail-demo-video');
-  if (project.demo_video) {
-    demoSource.src = `../public/${project.demo_video}`;
-    demoVideo.load();
+  const demoWrap      = document.getElementById('detail-demo');
+  const demoContainer = document.getElementById('detail-demo-container');
+  if (project.youtube) {
+    demoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${project.youtube}?rel=0" title="Démonstration – ${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>`;
+    demoWrap.style.display = 'block';
+  } else if (project.demo_video) {
+    demoContainer.innerHTML = `<video controls preload="metadata" style="width:100%;height:100%;" aria-label="Démonstration – ${title}"><source src="../public/${project.demo_video}" type="video/mp4" /></video>`;
     demoWrap.style.display = 'block';
   } else {
     demoWrap.style.display = 'none';
