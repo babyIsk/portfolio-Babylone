@@ -16,152 +16,7 @@
   <!-- Anti-FOUC -->
   <script>if(localStorage.getItem('theme')==='light')document.documentElement.classList.add('light')</script>
 
-  <style>
-    .legal-page {
-      padding-top: calc(var(--header-h) + var(--sp-16));
-      padding-bottom: var(--sp-24);
-      min-height: 100svh;
-    }
-
-    .legal-hero {
-      background: var(--clr-bg-2);
-      border-bottom: 1px solid var(--clr-border);
-      padding-block: var(--sp-12);
-      margin-bottom: var(--sp-16);
-    }
-
-    .legal-hero h1 {
-      font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
-      font-weight: var(--fw-extrabold);
-      margin-top: var(--sp-3);
-    }
-
-    .legal-hero p {
-      font-size: var(--text-sm);
-      color: var(--clr-text-muted);
-      margin-top: var(--sp-2);
-      max-width: none;
-    }
-
-    .legal-body {
-      max-width: 760px;
-    }
-
-    .legal-article {
-      margin-bottom: var(--sp-12);
-    }
-
-    .legal-article h2 {
-      font-size: var(--text-xl);
-      font-weight: var(--fw-bold);
-      color: var(--clr-accent);
-      margin-bottom: var(--sp-4);
-      padding-bottom: var(--sp-3);
-      border-bottom: 1px solid var(--clr-border);
-      display: flex;
-      align-items: center;
-      gap: var(--sp-3);
-    }
-
-    .legal-article h2 .article-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: var(--radius-full);
-      background: var(--clr-accent-alpha);
-      border: 1px solid var(--clr-accent-border);
-      font-size: var(--text-xs);
-      font-weight: var(--fw-bold);
-      flex-shrink: 0;
-    }
-
-    .legal-article p {
-      font-size: var(--text-base);
-      color: var(--clr-text-secondary);
-      line-height: 1.8;
-      max-width: none;
-      margin-bottom: var(--sp-3);
-    }
-
-    .legal-article p:last-child {
-      margin-bottom: 0;
-    }
-
-    .legal-article strong {
-      color: var(--clr-text);
-      font-weight: var(--fw-semibold);
-    }
-
-    .legal-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: var(--sp-4);
-      font-size: var(--text-sm);
-    }
-
-    .legal-table th {
-      text-align: left;
-      padding: var(--sp-3) var(--sp-4);
-      background: var(--clr-card);
-      border: 1px solid var(--clr-border);
-      color: var(--clr-text-muted);
-      font-weight: var(--fw-semibold);
-      font-size: var(--text-xs);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .legal-table td {
-      padding: var(--sp-3) var(--sp-4);
-      border: 1px solid var(--clr-border);
-      color: var(--clr-text-secondary);
-      vertical-align: top;
-    }
-
-    .legal-table td:first-child {
-      font-weight: var(--fw-medium);
-      color: var(--clr-text);
-      white-space: nowrap;
-      width: 30%;
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--sp-2);
-      color: var(--clr-accent);
-      font-size: var(--text-sm);
-      font-weight: var(--fw-medium);
-      margin-bottom: var(--sp-6);
-      transition: gap var(--tr);
-    }
-
-    .back-link:hover { gap: var(--sp-3); }
-
-    .table-wrapper {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      border-radius: var(--radius-md);
-    }
-
-    .legal-notice {
-      background: var(--clr-card);
-      border: 1px solid var(--clr-border);
-      border-left: 3px solid var(--clr-accent);
-      border-radius: var(--radius-lg);
-      padding: var(--sp-4) var(--sp-5);
-      font-size: var(--text-sm);
-      color: var(--clr-text-secondary);
-      line-height: 1.75;
-      margin-bottom: var(--sp-12);
-    }
-
-    .legal-notice strong {
-      color: var(--clr-accent);
-    }
-  </style>
+  <link rel="stylesheet" href="../styles/pages/mentions-legales.css" />
 </head>
 <body>
 
@@ -252,12 +107,12 @@
                 </tr>
                 <tr>
                   <td>Adresse e-mail</td>
-                  <td><a href="mailto:babylone.isshak@gmail.com" style="color:var(--clr-accent)">babylone.isshak@gmail.com</a></td>
+                  <td><a href="mailto:babylone.isshak@gmail.com">babylone.isshak@gmail.com</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p style="margin-top: 1rem;">
+          <p class="legal-table-note">
             Ce site étant à caractère strictement personnel et non commercial, l'adresse postale complète
             n'est pas requise en vertu de l'article 6-III-2 de la LCEN. Babylone ISSHAK est également
             directrice de la publication de ce site.
@@ -291,11 +146,11 @@
                 </tr>
                 <tr>
                   <td>Service d'hébergement</td>
-                  <td>GitHub Pages — <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent)">https://pages.github.com</a></td>
+                  <td>GitHub Pages — <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">https://pages.github.com</a></td>
                 </tr>
                 <tr>
                   <td>Contact</td>
-                  <td><a href="https://support.github.com" target="_blank" rel="noopener noreferrer" style="color:var(--clr-accent)">https://support.github.com</a></td>
+                  <td><a href="https://support.github.com" target="_blank" rel="noopener noreferrer">https://support.github.com</a></td>
                 </tr>
               </tbody>
             </table>
@@ -335,7 +190,7 @@
           </p>
           <p>
             <strong>Formulaire de contact :</strong> Le formulaire de contact de ce site utilise le protocole
-            <code style="color:var(--clr-yellow);font-size:0.9em">mailto:</code>, qui ouvre le client de messagerie
+            <code class="legal-inline-code">mailto:</code>, qui ouvre le client de messagerie
             de l'utilisateur. Aucune donnée n'est interceptée ni stockée par ce site ou par un tiers.
           </p>
           <p>
@@ -355,7 +210,7 @@
           </p>
         </article>
 
-        <p style="color:var(--clr-text-muted);font-size:var(--text-sm);margin-top:var(--sp-4)">
+        <p class="legal-update">
           <em>Dernière mise à jour : juin 2026</em>
         </p>
 
@@ -366,24 +221,13 @@
   <!-- ── Footer ── -->
   <footer class="footer" role="contentinfo">
     <div class="container">
-      <div class="footer-bottom" style="border-top:none; padding-top:0">
+      <div class="footer-bottom footer-bottom--borderless">
         <p>© 2026 Babylone ISSHAK - Tous droits réservés.</p>
         <a href="../index.html" class="footer-legal-link">← Retour à l'accueil</a>
       </div>
     </div>
   </footer>
 
-  <script type="module">
-    import { initNavbar } from '../js/modules/navbar.js';
-    import { initTheme }  from '../js/modules/theme.js';
-
-    const loader = document.getElementById('loader');
-    window.addEventListener('load', () => setTimeout(() => loader?.classList.add('hidden'), 800));
-
-    document.addEventListener('DOMContentLoaded', () => {
-      initNavbar();
-      initTheme();
-    });
-  </script>
+  <script type="module" src="../js/pages/mentions-legales.js"></script>
 </body>
 </html>
