@@ -81,7 +81,7 @@ export const translations = {
     'contact.form.err.message':  'Veuillez entrer votre message.',
 
     /* Footer */
-    'footer.tagline':    'Développeuse Front End JS',
+    'footer.tagline':    'Développeuse Front End',
     'footer.nav-title':  'Navigation',
     'footer.cnt-title':  'Contact',
     'footer.copyright':  '© 2026 Babylone ISSHAK - Tous droits réservés.',
@@ -185,7 +185,7 @@ export const translations = {
     'contact.form.err.message':  'Please enter your message.',
 
     /* Footer */
-    'footer.tagline':   'Front-End JS Developer',
+    'footer.tagline':   'Front-End Developer',
     'footer.nav-title': 'Navigation',
     'footer.cnt-title': 'Contact',
     'footer.copyright': '© 2026 Babylone ISSHAK — All rights reserved.',

@@ -36,7 +36,8 @@
     "featured": true,
     "github": "",
     "demo": "",
-    "cta": null
+    "cta": null,
+    "thumbnail": "sephora-dev-portal.webp"
   },
   {
     "id": "moss-aerien",
@@ -75,7 +76,8 @@
     "featured": true,
     "github": "",
     "demo": "",
-    "cta": null
+    "cta": null,
+    "thumbnail": "moss.webp"
   },
   {
     "id": "documentaire-interactif",
@@ -114,7 +116,10 @@
     "featured": true,
     "github": "",
     "demo": "",
-    "cta": { "type": "visit", "url": "https://noli.mastercmw.com/home" }
+    "cta": { "type": "visit", "url": "https://noli.mastercmw.com/home" },
+    "thumbnail": "",
+    "video": "video-documentaire-interactif.mp4",
+    "demo_video": "video-documentaire-interactif.mp4"
   },
   {
     "id": "archives-nationales",
@@ -153,7 +158,8 @@
     "featured": true,
     "github": "",
     "demo": "",
-    "cta": null
+    "cta": null,
+    "thumbnail": "archives-nationales.webp"
   },
   {
     "id": "tiqtec",
@@ -192,7 +198,8 @@
     "featured": true,
     "github": "",
     "demo": "",
-    "cta": { "type": "visit", "url": "https://tiqtec.com/" }
+    "cta": { "type": "visit", "url": "https://tiqtec.com/" },
+    "thumbnail": "tiqtec.webp"
   },
   {
     "id": "shareat-sae",
@@ -231,7 +238,8 @@
     "featured": false,
     "github": "",
     "demo": "",
-    "cta": { "type": "download", "url": "../public/reports/Rapport_ShareEat_S6.pdf" }
+    "cta": { "type": "download", "url": "../public/reports/Rapport_ShareEat_S6.pdf" },
+    "thumbnail": "ProjetShareEat.webp"
   },
   {
     "id": "paroisse-chaldeenne",
@@ -270,7 +278,9 @@
     "featured": true,
     "github": "",
     "demo": "",
-    "cta": { "type": "visit", "url": "https://saint-thomas-v2.web.app/" }
+    "cta": { "type": "visit", "url": "https://saint-thomas-v2.web.app/" },
+    "thumbnail": "",
+    "video": "video_site_paroisse_STA.mp4"
   },
   {
     "id": "paroisse-sarcelles",
@@ -309,7 +319,8 @@
     "featured": false,
     "github": "",
     "demo": "",
-    "cta": { "type": "visit", "url": "https://paroissesarcelles.wpcomstaging.com/" }
+    "cta": { "type": "visit", "url": "https://paroissesarcelles.wpcomstaging.com/" },
+    "thumbnail": "paroisse-sarcelles.webp"
   },
   {
     "id": "macles-hl-location",
@@ -348,7 +359,8 @@
     "featured": false,
     "github": "",
     "demo": "",
-    "cta": { "type": "visit", "url": "https://www.hl-locationsalle.com/" }
+    "cta": { "type": "visit", "url": "https://www.hl-locationsalle.com/" },
+    "thumbnail": "macles.webp"
   },
   {
     "id": "privas-sae",
@@ -387,7 +399,10 @@
     "featured": false,
     "github": "",
     "demo": "",
-    "cta": { "type": "download", "url": "../public/reports/rapport_MVC_Privas.pdf" }
+    "cta": { "type": "download", "url": "../public/reports/rapport_MVC_Privas.pdf" },
+    "thumbnail": "privas-ardeche.avif",
+    "thumbnail_credit": "ardeche.one",
+    "video": ""
   },
   {
     "id": "blender-3d-planets",
@@ -424,6 +439,9 @@
     "featured": false,
     "github": "",
     "demo": "",
-    "cta": null
+    "cta": null,
+    "thumbnail": "",
+    "thumbnail_credit": "",
+    "video": "planets-game.mp4"
   }
 ]

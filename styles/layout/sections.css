@@ -226,20 +226,24 @@ html.light .hero-canvas {
 }
 
 .about-avatar {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 290px;
   border-radius: var(--radius-xl);
-  background: linear-gradient(135deg, var(--clr-accent-alpha), var(--clr-accent-border));
   border: 2px solid var(--clr-accent-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: var(--text-5xl);
-  font-weight: var(--fw-extrabold);
-  color: var(--clr-accent);
-  letter-spacing: 0.05em;
   box-shadow: var(--shadow-glow);
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(160deg, var(--clr-accent) 0%, var(--clr-yellow) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+}
+
+.about-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .about-stats {
@@ -541,7 +545,8 @@ html.light .hero-canvas {
   box-shadow: var(--shadow-lg);
 }
 
-.video-wrapper iframe {
+.video-wrapper iframe,
+.video-wrapper video {
   position: absolute;
   inset: 0;
   width: 100%;

@@ -15,6 +15,8 @@ function getDetailBase() {
   return window.location.pathname.includes('/src/') ? '' : 'src/';
 }
 
+const PUBLIC_BASE = new URL('../../public/', import.meta.url).href;
+
 function buildCard(project) {
   const lang  = getLang();
   const title = project[`title_${lang}`] ?? project.title_fr;
@@ -25,12 +27,27 @@ function buildCard(project) {
 
   const detailUrl = `${getDetailBase()}project-detail.html?id=${project.id}`;
 
+  let thumbContent;
+  const overlay = `<div class="card-thumb-overlay"></div>`;
+  if (project.video) {
+    thumbContent = `<video class="card-thumb-img" autoplay loop muted playsinline>
+      <source src="${PUBLIC_BASE}${project.video}" type="video/mp4" />
+    </video>`;
+  } else if (project.thumbnail) {
+    const credit = project.thumbnail_credit
+      ? `<span class="card-thumb-credit">${project.thumbnail_credit}</span>`
+      : '';
+    thumbContent = `<img src="${PUBLIC_BASE}${project.thumbnail}" alt="${title}" class="card-thumb-img" />${credit}`;
+  } else {
+    thumbContent = `<div class="card-thumb-bg" style="color:${project.color}">${title.slice(0, 2).toUpperCase()}</div>`;
+  }
+
   return `
   <article class="project-card reveal" data-category="${project.category}" role="listitem">
     <a href="${detailUrl}" class="card-cover-link" aria-label="Voir les détails : ${title}"></a>
     <div class="card-thumb">
-      <div class="card-thumb-bg" style="color:${project.color}">${title.slice(0, 2).toUpperCase()}</div>
-      <div class="card-thumb-overlay" style="background:linear-gradient(135deg,${project.color}22,${project.color}44)"></div>
+      ${thumbContent}
+      ${overlay}
       <span class="${badgeClass(project.category)}">${badgeLabel(project.category)}</span>
     </div>
     <div class="card-body">
