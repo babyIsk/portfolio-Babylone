@@ -52,6 +52,17 @@ export function initNavbar() {
     }
   });
 
+  /* ── aria-current="page" sur le lien actif ── */
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link:not([href^="#"])').forEach(link => {
+    try {
+      const linkPath = new URL(link.href, location.origin).pathname;
+      if (currentPath === linkPath || currentPath.endsWith(linkPath)) {
+        link.setAttribute('aria-current', 'page');
+      }
+    } catch (_) {}
+  });
+
   /* ── Language switcher ── */
   langBtns.forEach(btn => {
     btn.addEventListener('click', () => {
